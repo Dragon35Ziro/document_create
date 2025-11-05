@@ -1,0 +1,234 @@
+СТРУКТУРА ПРОЕКТА:
+
+Namespace: hospital
+  Класс: hospital.account [Public]
+    Поле: Private string log
+    Метод: Private void LoadUserData()
+    Метод: Private void SaveButton_Click(object sender, RoutedEventArgs e)
+    Метод: Private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
+    Метод: Private void BackButton_Click(object sender, RoutedEventArgs e)
+    Метод: Private void LoadAppointments()
+  Класс: hospital.account.AppointmentInfo [Public]
+    Свойство: Public string Date
+    Свойство: Public string Time
+    Свойство: Public string Service
+    Свойство: Public string Specialization
+    Свойство: Public string Doctor
+Namespace: hospital
+  Класс: hospital.App [Public]
+Namespace: hospital
+  Класс: hospital.appointment [Public]
+    Поле: Private string log
+    Поле: Private System.Collections.Generic.List<hospital.Service> services
+    Поле: Private System.Collections.Generic.List<hospital.DoctorServiceInfo> doctorServices
+    Метод: Private void LoadServices()
+    Метод: Private void LoadDoctorsForService(int serviceId)
+    Метод: Private void LoadTimeSlots()
+    Метод: Private void ServiceComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    Метод: Private void SaveButton_Click(object sender, RoutedEventArgs e)
+    Метод: Private void BackButton_Click(object sender, RoutedEventArgs e)
+  Класс: hospital.Service [Public]
+    Свойство: Public int Id
+    Свойство: Public string Name
+  Класс: hospital.DoctorServiceInfo [Public]
+    Свойство: Public int DoctorServiceId
+    Свойство: Public string DoctorName
+    Свойство: Public string Specialization
+    Свойство: Public string DisplayInfo
+Namespace: hospital
+  Класс: hospital.DB [Internal]
+    Поле: Public SQLiteConnection Connection
+    Поле: Private string dbFileName
+    Метод: Public void openConnection()
+    Метод: Public void closeConnection()
+    Метод: Public SQLiteConnection GetConnection()
+Namespace: hospital
+  Класс: hospital.doctor [Public]
+    Поле: Private string log
+    Метод: Public System.Collections.Generic.List<hospital.doctor.DoctorInfo> GetUniqueDoctorsWithSpecializations()
+    Метод: Private void Button_Click(object sender, RoutedEventArgs e)
+  Класс: hospital.doctor.DoctorInfo [Public]
+    Свойство: Public int DoctorId
+    Свойство: Public string FullName
+    Свойство: Public int Experience
+    Свойство: Public string Specializations
+    Метод: Public string ToString()
+Namespace: hospital
+  Класс: hospital.login [Public]
+    Метод: Private void Button_Click(object sender, RoutedEventArgs e)
+    Метод: Private void Button_Click_1(object sender, RoutedEventArgs e)
+Namespace: hospital
+  Класс: hospital.MainWindow [Public]
+    Свойство: Private string log
+    Метод: Private void Button_Click(object sender, RoutedEventArgs e)
+    Метод: Private void Button_Click_1(object sender, RoutedEventArgs e)
+    Метод: Private void Button_Click_2(object sender, RoutedEventArgs e)
+    Метод: Private void Button_Click_3(object sender, RoutedEventArgs e)
+    Метод: Private void Button_Click_4(object sender, RoutedEventArgs e)
+Namespace: hospital
+  Класс: hospital.reg [Public]
+    Метод: Private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    Метод: Private void Button_Click(object sender, RoutedEventArgs e)
+    Метод: Private void Button_Click_1(object sender, RoutedEventArgs e)
+Namespace: hospital
+  Класс: hospital.Product [Public]
+    Свойство: Public string Name
+    Свойство: Public decimal Price
+    Свойство: Public int ID
+  Класс: hospital.services [Public]
+    Свойство: Private string log
+    Поле: Private ICollectionView _collectionView
+    Поле: Private System.Collections.Generic.List<hospital.Product> _allProducts
+    Метод: Private void LoadProducts()
+    Метод: Private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    Метод: Private void Button_Click(object sender, RoutedEventArgs e)
+Namespace: hospital
+  Класс: hospital.account [Public]
+    Поле: Internal System.Windows.Controls.TextBox LastNameTextBox
+    Поле: Internal System.Windows.Controls.TextBox FirstNameTextBox
+    Поле: Internal System.Windows.Controls.TextBox MiddleNameTextBox
+    Поле: Internal System.Windows.Controls.TextBox BirthDateTextBox
+    Поле: Internal System.Windows.Controls.TextBox PasswordTextBox
+    Поле: Internal System.Windows.Controls.TextBlock LoginTextBlock
+    Поле: Internal System.Windows.Controls.DataGrid AppointmentsDataGrid
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Internal System.Windows.Controls.Button SaveButton
+    Поле: Internal System.Windows.Controls.Button DeleteButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.account [Public]
+    Поле: Internal System.Windows.Controls.TextBox LastNameTextBox
+    Поле: Internal System.Windows.Controls.TextBox FirstNameTextBox
+    Поле: Internal System.Windows.Controls.TextBox MiddleNameTextBox
+    Поле: Internal System.Windows.Controls.TextBox BirthDateTextBox
+    Поле: Internal System.Windows.Controls.TextBox PasswordTextBox
+    Поле: Internal System.Windows.Controls.TextBlock LoginTextBlock
+    Поле: Internal System.Windows.Controls.DataGrid AppointmentsDataGrid
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Internal System.Windows.Controls.Button SaveButton
+    Поле: Internal System.Windows.Controls.Button DeleteButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.App [Public]
+    Метод: Public void InitializeComponent()
+    Метод: Public void Main()
+Namespace: hospital
+  Класс: hospital.App [Public]
+    Метод: Public void InitializeComponent()
+    Метод: Public void Main()
+Namespace: hospital
+  Класс: hospital.appointment [Public]
+    Поле: Internal System.Windows.Controls.ComboBox ServiceComboBox
+    Поле: Internal System.Windows.Controls.ComboBox DoctorComboBox
+    Поле: Internal System.Windows.Controls.DatePicker AppointmentDate
+    Поле: Internal System.Windows.Controls.ComboBox TimeComboBox
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Internal System.Windows.Controls.Button SaveButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.appointment [Public]
+    Поле: Internal System.Windows.Controls.ComboBox ServiceComboBox
+    Поле: Internal System.Windows.Controls.ComboBox DoctorComboBox
+    Поле: Internal System.Windows.Controls.DatePicker AppointmentDate
+    Поле: Internal System.Windows.Controls.ComboBox TimeComboBox
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Internal System.Windows.Controls.Button SaveButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.doctor [Public]
+    Поле: Internal System.Windows.Controls.ListBox listBoxDoctors
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.doctor [Public]
+    Поле: Internal System.Windows.Controls.ListBox listBoxDoctors
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.login [Public]
+    Поле: Internal System.Windows.Controls.TextBox loginV
+    Поле: Internal System.Windows.Controls.PasswordBox passV
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.login [Public]
+    Поле: Internal System.Windows.Controls.TextBox loginV
+    Поле: Internal System.Windows.Controls.PasswordBox passV
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.MainWindow [Public]
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.MainWindow [Public]
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.reg [Public]
+    Поле: Internal System.Windows.Controls.TextBox fam
+    Поле: Internal System.Windows.Controls.TextBox name
+    Поле: Internal System.Windows.Controls.TextBox otche
+    Поле: Internal System.Windows.Controls.TextBox date
+    Поле: Internal System.Windows.Controls.TextBox log_box
+    Поле: Internal System.Windows.Controls.PasswordBox pass_log
+    Поле: Internal System.Windows.Controls.PasswordBox pass_pow_log
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Internal System.Windows.Controls.Button RegisterButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.reg [Public]
+    Поле: Internal System.Windows.Controls.TextBox fam
+    Поле: Internal System.Windows.Controls.TextBox name
+    Поле: Internal System.Windows.Controls.TextBox otche
+    Поле: Internal System.Windows.Controls.TextBox date
+    Поле: Internal System.Windows.Controls.TextBox log_box
+    Поле: Internal System.Windows.Controls.PasswordBox pass_log
+    Поле: Internal System.Windows.Controls.PasswordBox pass_pow_log
+    Поле: Internal System.Windows.Controls.Button BackButton
+    Поле: Internal System.Windows.Controls.Button RegisterButton
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.services [Public]
+    Поле: Internal System.Windows.Controls.TextBox Search
+    Поле: Internal System.Windows.Controls.ListView List
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital
+  Класс: hospital.services [Public]
+    Поле: Internal System.Windows.Controls.TextBox Search
+    Поле: Internal System.Windows.Controls.ListView List
+    Поле: Private bool _contentLoaded
+    Метод: Public void InitializeComponent()
+    Метод: Private void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
+Namespace: hospital.Properties
+  Класс: hospital.Properties.Resources [Internal]
+    Поле: Private System.Resources.ResourceManager resourceMan
+    Поле: Private System.Globalization.CultureInfo resourceCulture
+    Свойство: Internal System.Resources.ResourceManager ResourceManager
+    Свойство: Internal System.Globalization.CultureInfo Culture
+Namespace: hospital.Properties
+  Класс: hospital.Properties.Settings [Internal]
+    Поле: Private hospital.Properties.Settings defaultInstance
+    Свойство: Public hospital.Properties.Settings Default

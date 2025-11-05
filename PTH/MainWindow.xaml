@@ -1,0 +1,144 @@
+﻿<Window x:Class="PTH.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PTH"
+        mc:Ignorable="d"
+        Title="Project Tool" 
+        Height="450" 
+        Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#005A9E"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#004275"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="PathDisplay" TargetType="TextBlock">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="ToolTip" Value="{Binding Text, RelativeSource={RelativeSource Self}}"/>
+        </Style>
+
+        <Style x:Key="SectionLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" 
+                Background="#007ACC" 
+                CornerRadius="8" 
+                Margin="0,0,0,20"
+                Padding="20">
+            <TextBlock Text="Настройка работы" 
+                       Foreground="White" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Project Selection Section -->
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Выбор проекта:" 
+                   Style="{StaticResource SectionLabel}"
+                   Grid.Column="0"/>
+
+            <Border Grid.Column="1" 
+                    Background="White" 
+                    CornerRadius="6" 
+                    Margin="10,0"
+                    BorderThickness="1"
+                    BorderBrush="#DDDDDD">
+                <TextBlock x:Name="project" 
+                           Text="Выберите проект..."
+                           Style="{StaticResource PathDisplay}"
+                           MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+            </Border>
+        </Grid>
+
+        <!-- Result Folder Section -->
+        <Grid Grid.Row="2" Margin="0,0,0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Папка результата:" 
+                   Style="{StaticResource SectionLabel}"
+                   Grid.Column="0"/>
+
+            <Border Grid.Column="1" 
+                    Background="White" 
+                    CornerRadius="6" 
+                    Margin="10,0"
+                    BorderThickness="1"
+                    BorderBrush="#DDDDDD">
+                <TextBlock x:Name="result" 
+                           Text="Выберите папку..."
+                           Style="{StaticResource PathDisplay}"
+                           MouseLeftButtonDown="result_MouseLeftButtonDown"/>
+            </Border>
+
+
+        </Grid>
+
+        <!-- Start Button -->
+        <Button Grid.Row="3" 
+                Content="Пуск" 
+                Style="{StaticResource ModernButton}"
+                HorizontalAlignment="Center"
+                Width="200"
+                Height="50" Click="Button_Click"
+                />
+    </Grid>
+</Window>

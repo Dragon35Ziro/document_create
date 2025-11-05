@@ -1,0 +1,151 @@
+<documentation>
+  <class name="hospital.account"><summary>Логика взаимодействия для account.xaml</summary>
+    <method name="hospital.account.LoadUserData()" returnType="void"><summary></summary></method>
+    <method name="hospital.account.SaveButton_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.account.DeleteAccountButton_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.account.BackButton_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.account.LoadAppointments()" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.account.AppointmentInfo"><summary></summary>
+    <property name="Date" type="string"><summary></summary></property>
+    <property name="Time" type="string"><summary></summary></property>
+    <property name="Service" type="string"><summary></summary></property>
+    <property name="Specialization" type="string"><summary></summary></property>
+    <property name="Doctor" type="string"><summary></summary></property>
+  </class>
+  <class name="hospital.App"><summary>Логика взаимодействия для App.xaml</summary>
+  </class>
+  <class name="hospital.appointment"><summary>appointment</summary>
+    <method name="hospital.appointment.LoadServices()" returnType="void"><summary></summary></method>
+    <method name="hospital.appointment.LoadDoctorsForService(int)" returnType="void"><summary></summary></method>
+    <method name="hospital.appointment.LoadTimeSlots()" returnType="void"><summary></summary></method>
+    <method name="hospital.appointment.ServiceComboBox_SelectionChanged(object, SelectionChangedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.appointment.SaveButton_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.appointment.BackButton_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.Service"><summary></summary>
+    <property name="Id" type="int"><summary></summary></property>
+    <property name="Name" type="string"><summary></summary></property>
+  </class>
+  <class name="hospital.DoctorServiceInfo"><summary></summary>
+    <property name="DoctorServiceId" type="int"><summary></summary></property>
+    <property name="DoctorName" type="string"><summary></summary></property>
+    <property name="Specialization" type="string"><summary></summary></property>
+    <property name="DisplayInfo" type="string"><summary></summary></property>
+  </class>
+  <class name="hospital.DB"><summary></summary>
+    <method name="hospital.DB.openConnection()" returnType="void"><summary></summary></method>
+    <method name="hospital.DB.closeConnection()" returnType="void"><summary></summary></method>
+    <method name="hospital.DB.GetConnection()" returnType="SQLiteConnection"><summary></summary></method>
+  </class>
+  <class name="hospital.doctor"><summary>Логика взаимодействия для doctor.xaml</summary>
+    <method name="hospital.doctor.GetUniqueDoctorsWithSpecializations()" returnType="System.Collections.Generic.List<hospital.doctor.DoctorInfo>"><summary></summary></method>
+    <method name="hospital.doctor.Button_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.doctor.DoctorInfo"><summary></summary>
+    <property name="DoctorId" type="int"><summary></summary></property>
+    <property name="FullName" type="string"><summary></summary></property>
+    <property name="Experience" type="int"><summary></summary></property>
+    <property name="Specializations" type="string"><summary></summary></property>
+    <method name="hospital.doctor.DoctorInfo.ToString()" returnType="string"><summary></summary></method>
+  </class>
+  <class name="hospital.login"><summary>Логика взаимодействия для login.xaml</summary>
+    <method name="hospital.login.Button_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.login.Button_Click_1(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.MainWindow"><summary>Логика взаимодействия для MainWindow.xaml</summary>
+    <property name="log" type="string"><summary></summary></property>
+    <method name="hospital.MainWindow.Button_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.MainWindow.Button_Click_1(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.MainWindow.Button_Click_2(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.MainWindow.Button_Click_3(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.MainWindow.Button_Click_4(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.reg"><summary>Логика взаимодействия для reg.xaml</summary>
+    <method name="hospital.reg.TextBox_TextChanged(object, TextChangedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.reg.Button_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.reg.Button_Click_1(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.Product"><summary>Логика взаимодействия для services.xaml</summary>
+    <property name="Name" type="string"><summary></summary></property>
+    <property name="Price" type="decimal"><summary></summary></property>
+    <property name="ID" type="int"><summary></summary></property>
+  </class>
+  <class name="hospital.services"><summary>services</summary>
+    <property name="log" type="string"><summary></summary></property>
+    <method name="hospital.services.LoadProducts()" returnType="void"><summary></summary></method>
+    <method name="hospital.services.TextBox_TextChanged(object, TextChangedEventArgs)" returnType="void"><summary></summary></method>
+    <method name="hospital.services.Button_Click(object, RoutedEventArgs)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.account"><summary>Логика взаимодействия для account.xaml</summary>
+    <method name="hospital.account.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.account.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.account"><summary>Логика взаимодействия для account.xaml</summary>
+    <method name="hospital.account.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.account.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.App"><summary>Логика взаимодействия для App.xaml</summary>
+    <method name="hospital.App.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.App.Main()" returnType="void"><summary>Application Entry Point.</summary></method>
+  </class>
+  <class name="hospital.App"><summary>Логика взаимодействия для App.xaml</summary>
+    <method name="hospital.App.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.App.Main()" returnType="void"><summary>Application Entry Point.</summary></method>
+  </class>
+  <class name="hospital.appointment"><summary>appointment</summary>
+    <method name="hospital.appointment.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.appointment.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.appointment"><summary>appointment</summary>
+    <method name="hospital.appointment.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.appointment.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.doctor"><summary>Логика взаимодействия для doctor.xaml</summary>
+    <method name="hospital.doctor.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.doctor.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.doctor"><summary>Логика взаимодействия для doctor.xaml</summary>
+    <method name="hospital.doctor.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.doctor.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.login"><summary>Логика взаимодействия для login.xaml</summary>
+    <method name="hospital.login.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.login.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.login"><summary>Логика взаимодействия для login.xaml</summary>
+    <method name="hospital.login.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.login.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.MainWindow"><summary>Логика взаимодействия для MainWindow.xaml</summary>
+    <method name="hospital.MainWindow.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.MainWindow.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.MainWindow"><summary>Логика взаимодействия для MainWindow.xaml</summary>
+    <method name="hospital.MainWindow.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.MainWindow.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.reg"><summary>Логика взаимодействия для reg.xaml</summary>
+    <method name="hospital.reg.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.reg.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.reg"><summary>Логика взаимодействия для reg.xaml</summary>
+    <method name="hospital.reg.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.reg.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.services"><summary>services</summary>
+    <method name="hospital.services.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.services.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.services"><summary>services</summary>
+    <method name="hospital.services.InitializeComponent()" returnType="void"><summary>InitializeComponent</summary></method>
+    <method name="hospital.services.Connect(int, object)" returnType="void"><summary></summary></method>
+  </class>
+  <class name="hospital.Properties.Resources"><summary>Класс ресурсов со строгим типом для поиска локализованных строк и пр.</summary>
+    <property name="ResourceManager" type="System.Resources.ResourceManager"><summary>Возврат кэшированного экземпляра ResourceManager, используемого этим классом.</summary></property>
+    <property name="Culture" type="System.Globalization.CultureInfo"><summary>Переопределяет свойство CurrentUICulture текущего потока для всех       подстановки ресурсов с помощью этого класса ресурсов со строгим типом.</summary></property>
+  </class>
+  <class name="hospital.Properties.Settings"><summary></summary>
+    <property name="Default" type="hospital.Properties.Settings"><summary></summary></property>
+  </class>
+</documentation>
